@@ -22,3 +22,11 @@ Route::any('home', 'HomeController@index')->name('home');
 Route::any('anyData', function (Illuminate\Http\Request $request) {
         return App\User::dataOperation($request);
 })->name('anyData');
+
+Route::any('contact', function (Illuminate\Http\Request $request) {
+        return view('contact');
+})->name('contact');
+
+Route::any('contactlistaddedit', function (Illuminate\Http\Request $request) {
+        return App\Contact::dataOperation($request);
+})->name('contactlistaddedit');
